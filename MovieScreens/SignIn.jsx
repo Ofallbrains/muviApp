@@ -7,7 +7,7 @@ import Or from '../Components/Or'
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
-export default function SignIn() {
+export default function SignIn({navigation}) {
   return (
       <View style={{ backgroundColor: '#26282C', height: height, width: width, alignSelf: 'center', padding: 20 }}>
           <Text>Email Adress</Text>
@@ -27,7 +27,7 @@ export default function SignIn() {
               left={<TextInput.Icon color={'#FDD32C'} size={15} icon={"lock-outline"} />}
           />
           <Text>Forgot Password?</Text>
-          <TouchableOpacity style={{ marginTop: 20, alignSelf: 'center', borderRadius: 10, borderWidth: 1, width: 300, backgroundColor: '#FDD32C' }}>
+          <TouchableOpacity onPress={() => navigation.navigate('Homescreen')} style={{ marginTop: 20, alignSelf: 'center', borderRadius: 10, borderWidth: 1, width: 300, backgroundColor: '#FDD32C' }}>
           <Buttons text="Sign In" />
           </TouchableOpacity>
           <Text>Or sign in with</Text>

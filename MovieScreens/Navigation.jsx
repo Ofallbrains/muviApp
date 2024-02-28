@@ -6,6 +6,7 @@ import GetStarted from './GetStarted';
 import Welcome from './Welcome';
 import SignUp from './SignUp';
 import SignIn from './SignIn';
+import HomeScreen from './TabScreens/HomeScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -19,6 +20,7 @@ const Navigation = () => {
                 <Stack.Screen name="Welcome" component={Welcome} options={{ headerShown: false }} />
                 <Stack.Screen name="Sign-Up" component={SignUp} options={{ headerShown: false }} />
                 <Stack.Screen name="Sign-In" component={SignIn} options={{ headerShown: false }} />
+                <Stack.Screen name="Homescreen" component={HomeScreen} options={{ headerShown: false }} />
 
             </Stack.Navigator>
         </NavigationContainer>

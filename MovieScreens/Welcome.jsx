@@ -10,7 +10,7 @@ const height = Dimensions.get('window').height
 export default function Welcome({navigation}) {
   return (
     <View style={{ backgroundColor: '#26282C', width: width, height: height, }}>
-      <View style={{height: 200 }}>
+      <View style={{height: 200, paddingTop: 30 }}>
       <View style={{ padding: 20, alignSelf: 'center', display: 'flex', flexDirection: 'row', gap: 3, }}>
         <Text style={{ color: 'black', fontSize: 35, fontWeight: 'bold', backgroundColor: '#FDD32C', borderWidth: 1, borderColor: '#FDD32C', borderRadius: 10, textAlign: 'center', width: 40 }}>M</Text>
         <Text style={{ color: 'white', fontSize: 35, fontWeight: 'bold' }}>Muvi</Text>
@@ -37,10 +37,10 @@ export default function Welcome({navigation}) {
         <Buttons text="Sign Up" style={{ backgroundColor: '#FDD32C',}}/>
       </TouchableOpacity>
 
-      <View style={{ display: 'flex', flexDirection: 'row', gap: 3, marginTop: 10, }}>
-      <Text style={{ color: 'white' }}>Already have an account?</Text>
+      <View style={{ display: 'flex', flexDirection: 'row', gap: 3,paddingTop: 20, alignSelf: 'center', }}>
+      <Text style={{ color: 'white', fontSize: 15 }}>Already have an account?</Text>
         <TouchableOpacity onPress={() => navigation.navigate('Sign-In')}>
-      <Text style={{ color: '#FDD32C' }}>Sign In</Text>
+      <Text style={{ color: '#FDD32C', fontWeight: 'bold', fontSize: 15 }}>Sign In</Text>
         </TouchableOpacity>
       </View>
 

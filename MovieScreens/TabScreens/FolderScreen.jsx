@@ -1,4 +1,5 @@
-import { View, Text,Dimensions } from 'react-native'
+import { View, Text, Dimensions, ScrollView, FlatList } from 'react-native'
+import { StatusBar } from 'expo-status-bar'
 import React,{useState} from 'react'
 import Movies from '../../Components/Movies'
 import Pages from '../../Components/Pages'

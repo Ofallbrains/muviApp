@@ -9,7 +9,7 @@ const height = Dimensions.get('screen').height;
 export default function ProfileScreen() {
     return (
         <View style={{ padding: 20, backgroundColor: '#26282C', width: width, height: height, marginTop: 20 }}>
-            <StatusBar style="dark" />
+            <StatusBar style="light" />
             
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 <Text style={{ fontWeight: 'bold', fontSize: 22, color: 'white', padding: 10 }}>More</Text>

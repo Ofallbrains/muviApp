@@ -5,11 +5,12 @@ import { Ionicons } from "react-native-vector-icons";
 import Pages from '../../Components/Pages';
 import Movies from '../../Components/Movies';
 import Button from '../../Components/Button';
+import Navigation from '../Navigation';
 
 const width = Dimensions.get('window').width
 const height = Dimensions.get('window').height
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
 
     const options = {
         method: 'GET',
@@ -36,6 +37,10 @@ export default function HomeScreen() {
         .then(response => setMuvi(response.results))
         .catch(err => console.error(err));
     const [muvi, setMuvi] = useState([])
+
+    const handlePressImage = () => {
+        navigation.navigate('Action')
+    }
 
     return (
         <View style={{ backgroundColor: '#26282C', height: height, width: width, alignSelf: 'center', padding: 20 }}>
@@ -97,10 +102,10 @@ export default function HomeScreen() {
                     renderItem={post => {
                         const item = post.item
                         return (
-                            <Movies text={item.vote_average} image={item.poster_path} />
+                            <Movies text={item.vote_average} image={item.poster_path} onpress={handlePressImage} />
                         )
                     }}
-                    scrollEnabled={false}
+                   
                 />
 
 
@@ -121,10 +126,10 @@ export default function HomeScreen() {
                     renderItem={post => {
                         const item = post.item
                         return (
-                            <Movies text={item.vote_average} image={item.poster_path} />
+                            <Movies text={item.vote_average} image={item.poster_path} onpress={handlePressImage} />
                         )
                     }}
-                    scrollEnabled={false}
+                    
                 />
 
                 <View style={{ paddingTop: 20, display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -146,7 +151,7 @@ export default function HomeScreen() {
                     renderItem={post => {
                         const item = post.item
                         return (
-                            <Pages text={item.vote_average} image={item.poster_path} />
+                            <Pages text={item.vote_average} image={item.poster_path} onpress={handlePressImage} />
                         )
                     }}
                     scrollEnabled={false}

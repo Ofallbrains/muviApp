@@ -44,7 +44,7 @@ export default function Action() {
                         <Feather name="play" size={24} color="white" />
                         <Text style={{ color: 'white', marginLeft: 5 }}>Play</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={{ width: 180, flexDirection: 'row', padding: 7, borderRadius: 5, alignItems: 'center', justifyContent: 'center', borderColor: 'grey', borderWidth: 1 }}>
+                    <TouchableOpacity style={{ width: 160, flexDirection: 'row', padding: 7, borderRadius: 5, alignItems: 'center', justifyContent: 'center', borderColor: 'grey', borderWidth: 1 }}>
                         <AntDesign name="plus" size={15} color="yellow" />
                         <Text style={{ color: 'white', marginLeft: 5 }}>My List</Text>
                     </TouchableOpacity>

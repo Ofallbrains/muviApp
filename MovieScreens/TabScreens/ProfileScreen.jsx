@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Text, Image, Dimensions } from 'react-native'
 import { FontAwesome6, MaterialCommunityIcons, SimpleLineIcons, Feather, MaterialIcons } from 'react-native-vector-icons';
-import { StatusBar } from 'expo-status-bar';
+
 
 const width = Dimensions.get('screen').width;
 const height = Dimensions.get('screen').height;
@@ -9,7 +9,7 @@ const height = Dimensions.get('screen').height;
 export default function ProfileScreen() {
     return (
         <View style={{ padding: 20, backgroundColor: '#26282C', width: width, height: height, marginTop: 20 }}>
-            <StatusBar style="light" />
+            
             
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 <Text style={{ fontWeight: 'bold', fontSize: 22, color: 'white', padding: 10 }}>More</Text>

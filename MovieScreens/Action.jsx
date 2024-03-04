@@ -1,13 +1,14 @@
 import { View, Text, Dimensions, Image, ScrollView, TouchableOpacity, FlatList } from 'react-native'
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import { StatusBar } from 'expo-status-bar'
 import { AntDesign,Feather } from 'react-native-vector-icons';
 import Muvies from '../Components/Muvies';
 
+
 const width = Dimensions.get('screen').width
 const height = Dimensions.get('screen').height
 
-export default function Action() {
+export default function Action({navigation}) {
 
     const options = {
         method: 'GET',
@@ -16,22 +17,32 @@ export default function Action() {
             Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NzNjOWNmNTg3YWE1OTFkMDI1MDJkYWE2MzUxYjllZSIsInN1YiI6IjY1ZDg2ZDdkY2VkYWM0MDE4NTUzZmRlNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nGsRurclQjC4-euULj95Oj27UGSGzlHxnfN_qfFMUQE'
         }
     };
-
+        
     fetch(`https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1`, options)
         .then(response => response.json())
         .then(response => setmymovie(response.results))
         .catch(err => console.error(err));
     const [mymovie, setmymovie] = useState([])
 
+        
+    fetch(`https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`, options)
+        .then(response => response.json())
+        .then(response => setMyMovies(response.results))
+        .catch(err => console.error(err));
+    const [myMovies, setMyMovies] = useState([])
 
+    
     return (
         <View style={{ width: width, height: height, backgroundColor: 'black', }}>
             <ScrollView>
                 <StatusBar style="light" />
-                <View>
-                    <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold', paddingLeft: 30, marginTop: 30 }}>Action</Text>
+                <View style={{ display: 'flex', flexDirection: 'row', gap: 10 }}>
+                    <TouchableOpacity onPress={() => navigation.navigate('home')}>
+                        <AntDesign name="arrowleft" size={30} color="white" style={{ marginTop: 30, paddingLeft: 30 }} />
+                    </TouchableOpacity>
+                    <Text style={{ color: 'white', fontSize: 25, fontWeight: 'bold',  marginTop: 30 }}>Action</Text>
                 </View>
-                <View style={{ paddingLeft: 30,paddingTop: 20  }}>
+                <View style={{ paddingLeft: 30,paddingTop: 10 }}>
                     <Image source={{ uri: 'https://cdn.vox-cdn.com/thumbor/0i_tyUccjw8RJv29XMAHSW-dK-U=/0x0:2700x1350/1200x800/filters:focal(1134x459:1566x891)/cdn.vox-cdn.com/uploads/chorus_image/image/58026259/jumanjicover.0.jpg' }}
                         style={{ width: 330, height: 200 }} />
                     <Text style={{ color: 'white', fontWeight: 'bold', fontSize: 20, marginTop: 10 }}>Jumanji: The Next Level</Text>
@@ -73,7 +84,7 @@ export default function Action() {
                     <Text style={{ color: 'white', fontSize: 20,  fontWeight: 'bold' }}>Muvi Originals Actions</Text>
                         <FlatList
                     horizontal={true}
-                    data={mymovie}
+                    data={myMovies}
                     keyExtractor={item => {
                         return item.id
                     }}

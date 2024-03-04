@@ -34,7 +34,7 @@ export default function SignIn({navigation}) {
           <TouchableOpacity onPress={() => navigation.navigate('Main')} style={{ marginTop: 20, alignSelf: 'center', borderRadius: 5, borderWidth: 1, width: 330, backgroundColor: '#FDD32C' }}>
           <Buttons text="Sign In" />
           </TouchableOpacity>
-          <Text>Or sign in with</Text>
+          <Text style={{ textAlign: 'center', color: 'white', paddingTop: 20 }}>Or sign in with</Text>
           <View style={{ display: 'flex', flexDirection: 'row', gap: 3, borderRadius: 5, borderColor: 'white', borderWidth: 1, marginTop: 10, }}>
               <Or text="Sign in with Apple" Icon={<FontAwesome name="apple" size={24} color="white" />} />
           </View>

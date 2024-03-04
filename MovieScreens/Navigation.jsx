@@ -62,6 +62,7 @@ export default function Navigation() {
         <Stack.Screen name="Sign-Up" component={SignUp} options={{ headerShown: false }} />
         <Stack.Screen name="Sign-In" component={SignIn} options={{ headerShown: false }} />
         <Stack.Screen name="Action" component={Action} options={{ headerShown: false }} />
+        <Stack.Screen name="home" component={HomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Main" component={MyTabs} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>

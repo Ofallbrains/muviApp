@@ -7,8 +7,8 @@ import Movies from '../../Components/Movies';
 import Button from '../../Components/Button';
 import Navigation from '../Navigation';
 
-const width = Dimensions.get('window').width
-const height = Dimensions.get('window').height
+const width = Dimensions.get('screen').width
+const height = Dimensions.get('screen').height
 
 export default function HomeScreen({navigation}) {
 
@@ -38,9 +38,6 @@ export default function HomeScreen({navigation}) {
         .catch(err => console.error(err));
     const [muvi, setMuvi] = useState([])
 
-    const handlePressImage = () => {
-        navigation.navigate('Action')
-    }
 
     return (
         <View style={{ backgroundColor: '#26282C', height: height, width: width, alignSelf: 'center', padding: 20 }}>
@@ -102,7 +99,7 @@ export default function HomeScreen({navigation}) {
                     renderItem={post => {
                         const item = post.item
                         return (
-                            <Movies text={item.vote_average} image={item.poster_path} onpress={handlePressImage} />
+                            <Movies text={item.vote_average} image={item.poster_path} onpress={()=>navigation.navigate('Action', item)} />
                         )
                     }}
                    
@@ -126,7 +123,7 @@ export default function HomeScreen({navigation}) {
                     renderItem={post => {
                         const item = post.item
                         return (
-                            <Movies text={item.vote_average} image={item.poster_path} onpress={handlePressImage} />
+                            <Movies text={item.vote_average} image={item.poster_path} onpress={()=>navigation.navigate('Action', item)} />
                         )
                     }}
                     
@@ -151,7 +148,7 @@ export default function HomeScreen({navigation}) {
                     renderItem={post => {
                         const item = post.item
                         return (
-                            <Pages text={item.vote_average} image={item.poster_path} onpress={handlePressImage} />
+                            <Pages text={item.vote_average} image={item.poster_path} onpress={()=>navigation.navigate('Action', item)} />
                         )
                     }}
                     scrollEnabled={false}

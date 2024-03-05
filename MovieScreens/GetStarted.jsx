@@ -1,7 +1,11 @@
 
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { View, Text, ImageBackground, TouchableOpacity } from 'react-native';
+import { View, Text, ImageBackground, TouchableOpacity, Dimensions } from 'react-native';
+
+// const width = Dimensions.get('screen').width
+// const height = Dimensions.get('screen').height
+
 
 export default function GetStarted({ navigation }) {
     return (

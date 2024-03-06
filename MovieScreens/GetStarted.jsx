@@ -3,8 +3,8 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { View, Text, ImageBackground, TouchableOpacity, Dimensions } from 'react-native';
 
-// const width = Dimensions.get('screen').width
-// const height = Dimensions.get('screen').height
+const width = Dimensions.get('screen').width
+const height = Dimensions.get('screen').height
 
 
 export default function GetStarted({ navigation }) {
@@ -30,7 +30,7 @@ export default function GetStarted({ navigation }) {
                 onPress={() =>
                     navigation.navigate('Watchmovie')
                 }>
-                <Text style={{ color: 'black', backgroundColor: '#FDD130', fontSize: 15, width: 370, textAlign: 'center', padding: 10 }}>Get Started</Text>
+                <Text style={{ color: 'black', backgroundColor: '#FDD130', fontSize: 15, width: 330, textAlign: 'center', padding: 10 }}>Get Started</Text>
             </TouchableOpacity>
         </View>
 

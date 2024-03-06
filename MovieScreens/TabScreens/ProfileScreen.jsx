@@ -1,5 +1,6 @@
+import { StatusBar } from 'expo-status-bar';
 import React from 'react'
-import { View, Text, Image, Dimensions } from 'react-native'
+import { View, Text, Image, Dimensions, TouchableOpacity } from 'react-native'
 import { FontAwesome6, MaterialCommunityIcons, SimpleLineIcons, Feather, MaterialIcons } from 'react-native-vector-icons';
 
 
@@ -9,7 +10,7 @@ const height = Dimensions.get('screen').height;
 export default function ProfileScreen() {
     return (
         <View style={{ padding: 20, backgroundColor: '#26282C', width: width, height: height, marginTop: 20 }}>
-            
+            <StatusBar style="dark" />
             
             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                 <Text style={{ fontWeight: 'bold', fontSize: 22, color: 'white', padding: 10 }}>More</Text>
@@ -82,10 +83,9 @@ export default function ProfileScreen() {
                         <SimpleLineIcons name="arrow-right" size={16} color="white" />
                     </View>
 
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 20 }}>
+                    <TouchableOpacity>
                         <Text style={{ fontSize: 18, fontWeight: '400', color: 'white' }}>Sign Out</Text>
-                        <SimpleLineIcons name="arrow-right" size={16} color="white" />
-                    </View>
+                    </TouchableOpacity>
 
                 </View>
 

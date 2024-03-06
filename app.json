@@ -4,12 +4,12 @@
     "slug": "muviApp",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/logo.png",
+    "icon": "./assets/logo.jpeg",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/logo.png",
+      "image": "./assets/logo.jpeg",
       "resizeMode": "contain",
-      "backgroundColor": "#26282C"
+      "backgroundColor": "#0000000"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -19,12 +19,12 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/logo.png",
-        "backgroundColor": "#26282C"
+        "foregroundImage": "./assets/logo.jpeg",
+        "backgroundColor": "#000000"
       }
     },
     "web": {
-      "favicon": "./assets/logo.png"
+      "favicon": "./assets/logo.jpeg"
     }
   }
 }

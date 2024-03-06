@@ -28,9 +28,9 @@ export default function GetStarted({ navigation }) {
             </View>
             <TouchableOpacity style={{ position: 'absolute', bottom: 20, padding: 10, borderRadius: 10, justifyContent: 'center', alignItems: 'center' }}
                 onPress={() =>
-                    navigation.navigate('Welcome')
+                    navigation.navigate('Watchmovie')
                 }>
-                <Text style={{ color: 'black', backgroundColor: '#FDD130', fontSize: 15, width: 355, textAlign: 'center', padding: 10 }}>Get Started</Text>
+                <Text style={{ color: 'black', backgroundColor: '#FDD130', fontSize: 15, width: 370, textAlign: 'center', padding: 10 }}>Get Started</Text>
             </TouchableOpacity>
         </View>
 

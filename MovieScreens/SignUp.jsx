@@ -21,43 +21,40 @@ export default function SignUp({ navigation }) {
                 label={'Email'}
                 textColor='white'
                 style={{ backgroundColor: '#26282C', borderRadius: 10, marginTop: 30, }}
-                right={<TextInput.Icon color={'#FDD32C'} size={15} icon={"email-outline"} />}
+                right={<TextInput.Icon color={'#FDD32C'} size={22} icon={"email-outline"} />}
             />
             <TextInput
                 label={'Password'} secureTextEntry
                 textColor='white'
                 style={{ backgroundColor: '#26282C', borderRadius: 10, }}
-                right={<TextInput.Icon color={'#FDD32C'} size={15} icon={"lock-outline"} />}
+                right={<TextInput.Icon color={'#FDD32C'} size={22} icon={"lock-outline"} />}
             />
             <TextInput
                 label={'Confirm Password'} secureTextEntry
                 textColor='white'
                 style={{ backgroundColor: '#26282C', borderRadius: 10, }}
-                right={<TextInput.Icon color={'#FDD32C'} size={15} icon={"lock-outline"} />}
+                right={<TextInput.Icon color={'#FDD32C'} size={22} icon={"lock-outline"} />}
             />
-            <TouchableOpacity onPress={() => navigation.navigate('Main')} style={{ marginTop: 20, alignSelf: 'center', borderRadius: 5, borderWidth: 1, width: 340, backgroundColor: '#FDD32C' }}>
+            <TouchableOpacity onPress={() => navigation.navigate('Main')} style={{ marginTop: 20, alignSelf: 'center', borderRadius: 5, borderWidth: 1, width: 355, backgroundColor: '#FDD32C' }}>
                 <Buttons text="Sign Up" style={{ backgroundColor: '#FDD32C',  }} />
             </TouchableOpacity>
-            <View style={{ alignItems: 'center', paddingTop: 20, paddingRight: 20, display: 'flex', flexDirection: 'row', gap: 3 }}>
+            <View style={{ alignItems: 'center', paddingTop: 20, paddingLeft: 10, display: 'flex', flexDirection: 'row', gap: 3 }}>
                 <Text style={{ color: 'white' }}>By signing up, you agree to our</Text>
                 <Text style={{ color: '#FDD32C' }} >Terms of Services</Text>
+                </View>
+            <View style={{ alignItems: 'center', paddingLeft: 100, display: 'flex', flexDirection: 'row', gap: 3 }}>
                 <Text style={{ color: 'white' }}>and </Text>
                 <Text style={{ color: '#FDD32C' }}>Privacy Policy</Text>
             </View>
-            <Text style={{ textAlign: 'center', color: 'white' }}>Or simply sign up with</Text>
-            <View style={{ display: 'flex', flexDirection: 'row', gap: 3, borderRadius: 5, borderColor: 'white', borderWidth: 1, marginTop: 25, }}>
+            <Text style={{ textAlign: 'center', color: 'white', fontWeight: 'bold', paddingTop: 30 }}>Or simply sign up with</Text>
+            <TouchableOpacity    style={{ display: 'flex', flexDirection: 'row', gap: 3, borderRadius: 5, borderColor: 'white', borderWidth: 1, marginTop: 10, }}>
                 <Or text="Sign up with Apple" Icon={<FontAwesome name="apple" size={24} color="white" />} />
-            </View>
+            </TouchableOpacity>
 
-            <View style={{ display: 'flex', flexDirection: 'row', gap: 3, borderRadius: 5, borderColor: 'white', borderWidth: 1, marginTop: 10, }}>
+            <TouchableOpacity style={{ display: 'flex', flexDirection: 'row', gap: 3, borderRadius: 5, borderColor: 'white', borderWidth: 1, marginTop: 10, }}>
                 <Or text="Sign up with Google" Icon={<FontAwesome name="google" size={24} color="red" />} />
-            </View>
-            <View style={{ display: 'flex', paddingTop: 20, flexDirection: 'row', gap: 3, alignSelf: 'center', marginTop: 10 }}>
-                <Text style={{ textAlign: 'center', color: 'white', fontSize: 15 }}>Already have an account?</Text>
-                <TouchableOpacity onPress={() => navigation.navigate('Sign-In')}>
-                    <Text style={{ color: '#FDD32C', fontSize: 15,fontWeight: 'bold'  }}>Sign In</Text>
-                </TouchableOpacity>
-            </View>
+            </TouchableOpacity>
+            
 
         </View>
     )

@@ -13,6 +13,7 @@ import ProfileScreen from '../MovieScreens/TabScreens/ProfileScreen';
 import SearchScreen from '../MovieScreens/TabScreens/SearchScreen';
 import FolderScreen from '../MovieScreens/TabScreens/FolderScreen';
 import Action from '../MovieScreens/Action';
+import WatchMovie from './WatchMovie';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -58,6 +59,7 @@ export default function Navigation() {
       <Stack.Navigator initialRouteName="Splash">
         <Stack.Screen name="Splash" component={SplashScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Here" component={GetStarted} options={{ headerShown: false }} />
+        <Stack.Screen name="Watchmovie" component={WatchMovie} options={{ headerShown: false }} />
         <Stack.Screen name="Welcome" component={Welcome} options={{ headerShown: false }} />
         <Stack.Screen name="Sign-Up" component={SignUp} options={{ headerShown: false }} />
         <Stack.Screen name="Sign-In" component={SignIn} options={{ headerShown: false }} />

@@ -55,11 +55,11 @@ export default function SignIn({ navigation }) {
                 console.log(response)
                 navigation.navigate('Main')
                 console.log('you are now signed in')
-                showMessage({
-                    message: 'you are now signed in',
-                    type: 'success', 
-                    icon: 'success',
-                })
+                // showMessage({
+                //     message: 'you are now signed in',
+                //     type: 'success', 
+                //     icon: 'success',
+                // })
 
             } catch (error) {
                 console.log(error)

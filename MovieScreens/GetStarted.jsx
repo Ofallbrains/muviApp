@@ -30,7 +30,7 @@ export default function GetStarted({ navigation }) {
                 onPress={() =>
                     navigation.navigate('Watchmovie')
                 }>
-                <Text style={{ color: 'black', backgroundColor: '#FDD130', fontSize: 15, width: 330, textAlign: 'center', padding: 10 }}>Get Started</Text>
+                <Text style={{ color: 'black', backgroundColor: '#FDD130', fontSize: 15, width: 355, textAlign: 'center', padding: 10 }}>Get Started</Text>
             </TouchableOpacity>
         </View>
 

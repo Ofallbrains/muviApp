@@ -1,15 +1,12 @@
-import Action from './MovieScreens/Action';
+import 'react-native-gesture-handler';
 import Navigation from './MovieScreens/Navigation';
-import FolderScreen from './MovieScreens/TabScreens/FolderScreen';
-import ProfileScreen from './MovieScreens/TabScreens/ProfileScreen';
-import SearchScreen from './MovieScreens/TabScreens/SearchScreen'
 
+import SettingsScreen from './MovieScreens/TabScreens/SettingsScreen';
 
 export default function App(){
   return (
     // <Navigation />
-   <ProfileScreen />
-   
+    <SettingsScreen />
   )
 }
 

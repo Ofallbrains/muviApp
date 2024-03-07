@@ -1,13 +1,20 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react'
 import { View, Text, Image, Dimensions, TouchableOpacity } from 'react-native'
-import { FontAwesome6, MaterialCommunityIcons, SimpleLineIcons, Feather, MaterialIcons } from 'react-native-vector-icons';
+import { MaterialCommunityIcons, SimpleLineIcons, Feather, MaterialIcons } from 'react-native-vector-icons';
+import { firebaseAuth } from '../../firebaseConfig';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const width = Dimensions.get('screen').width;
 const height = Dimensions.get('screen').height;
 
-export default function ProfileScreen() {
+export default function ProfileScreen({ navigation }) {
+    const handleSignout = async () => {
+        await firebaseAuth.signOut();
+        await AsyncStorage.removeItem('userData');
+        navigation.navigate('Sign-In');
+    }
     return (
         <View style={{ padding: 20, backgroundColor: '#26282C', width: width, height: height, marginTop: 20 }}>
             <StatusBar style="dark" />
@@ -83,8 +90,8 @@ export default function ProfileScreen() {
                         <SimpleLineIcons name="arrow-right" size={16} color="white" />
                     </View>
 
-                    <TouchableOpacity>
-                        <Text style={{ fontSize: 18, fontWeight: '400', color: 'white' }}>Sign Out</Text>
+                    <TouchableOpacity  onPress={handleSignout} style={{marginTop: 20}}>
+                        <Text style={{ fontSize: 18, fontWeight: '400', color: 'yellow' }}>Sign Out</Text>
                     </TouchableOpacity>
 
                 </View>

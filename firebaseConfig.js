@@ -5,14 +5,15 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 import { getAuth } from "firebase/auth";
+import {FIREBASE_API_KEY,FIREBASE_AUTH_DOMAIN,FIREBASE_PROJECT_ID,FIREBASE_STORAGE_BUCKET,FIREBASE_MESSAGE_SENDER,FIREBASE_APPID} from 'app/config'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCYAirrOC5ps7dBNTR0fwZExdijffiV8-0",
-  authDomain: "fir-muvi-app.firebaseapp.com",
-  projectId: "fir-muvi-app",
-  storageBucket: "fir-muvi-app.appspot.com",
-  messagingSenderId: "837034625442",
-  appId: "1:837034625442:web:004684df974ebf907b4afb"
+  apiKey: FIREBASE_API_KEY,
+  authDomain: FIREBASE_AUTH_DOMAIN,
+  projectId: FIREBASE_PROJECT_ID,
+  storageBucket: FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: FIREBASE_MESSAGE_SENDER,
+  appId: FIREBASE_APPID
 };
 
 // Initialize Firebase

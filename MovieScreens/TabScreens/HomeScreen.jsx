@@ -43,7 +43,7 @@ export default function HomeScreen({navigation}) {
         <View style={{ backgroundColor: '#26282C', height: height, width: width, alignSelf: 'center', padding: 20 }}>
             <StatusBar style="light" />
 
-            <View style={{ paddingBottom: -10, }}>
+            {/* <View style={{ paddingBottom: -10, }}>
                 <View style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 30 }}>
                     <View style={{ flexDirection: 'row', gap: 2 }}>
                         <Text style={{ color: 'black', fontSize: 25, fontWeight: 'bold', backgroundColor: '#F1B91C', borderWidth: 1, borderColor: '#FDD32C', borderRadius: 6, textAlign: 'center', width: 35 }}>M</Text>
@@ -69,7 +69,7 @@ export default function HomeScreen({navigation}) {
                         </View>
                     </ScrollView>
                 </View>
-            </View>
+            </View> */}
             <ScrollView>
                 <ScrollView horizontal showsHorizontalScrollIndicator={false} style={{ marginTop: 20 }}>
                     <View style={{ flexDirection: 'row', gap: 15 }}>

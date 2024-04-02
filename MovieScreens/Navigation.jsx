@@ -2,6 +2,8 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import SplashScreen from './SplashScreen';
 import GetStarted from './GetStarted';
 import Welcome from './Welcome';
@@ -12,11 +14,17 @@ import HomeScreen from '../MovieScreens/TabScreens/HomeScreen';
 import ProfileScreen from '../MovieScreens/TabScreens/ProfileScreen';
 import SearchScreen from '../MovieScreens/TabScreens/SearchScreen';
 import FolderScreen from '../MovieScreens/TabScreens/FolderScreen';
+import SettingsScreen from './TabScreens/SettingsScreen';
 import Action from '../MovieScreens/Action';
 import WatchMovie from './WatchMovie';
+import Films from './TopNav/Films';
+import { DrawerNavigator } from './Drawnav';
 
 const Stack = createNativeStackNavigator();
 const Tabs = createBottomTabNavigator();
+const Top = createMaterialTopTabNavigator();
+const Drawer = createDrawerNavigator();
+
 
 const MyTabs = () => {
   return (
@@ -48,10 +56,34 @@ const MyTabs = () => {
       <Tabs.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
       <Tabs.Screen name="Search" component={SearchScreen} options={{ headerShown: false }} />
       <Tabs.Screen name="Folder" component={FolderScreen} options={{ headerShown: false }} />
-      <Tabs.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
+      <Tabs.Screen name="Profile" component={DrawerNavigator} options={{ headerShown: false }} />
     </Tabs.Navigator>
   );
 };
+
+// export const TopNavigator = () => {
+//   return (
+//     <Top.Navigator
+//     screenOptions={{
+//       tabBarActiveTintColor: '#D9BE52',
+//       tabBarInactiveTintColor: '#CACCCE',
+//       tabBarScrollEnabled: true,
+//       tabBarItemStyle: { width: 120, },
+//       tabBarIndicatorStyle: { backgroundColor: '#D9BE52',},
+//       tabBarStyle: { backgroundColor: '#1F2123',},
+//     }}
+//     >
+//       <Top.Screen name="Featured" component={Home} options={{ headerShown: false }} />
+//       <Top.Screen name="Action" component={Films} options={{ headerShown: false }} />
+//       <Top.Screen name="Now Playing" component={Films} options={{ headerShown: false }} />
+//       <Top.Screen name="Upcoming" component={Films} options={{ headerShown: false }} />
+//       <Top.Screen name="Popular" component={Films} options={{ headerShown: false }} />
+      
+//     </Top.Navigator>
+//   );
+// };
+
+
 
 
 export default function Navigation() {
@@ -65,6 +97,7 @@ export default function Navigation() {
         <Stack.Screen name="Sign-Up" component={SignUp} options={{ headerShown: false }} />
         <Stack.Screen name="Sign-In" component={SignIn} options={{ headerShown: false }} />
         <Stack.Screen name="Action" component={Action} options={{ headerShown: false }} />
+        <Stack.Screen name="Settings" component={SettingsScreen} options={{ headerShown: false }} />
         <Stack.Screen name="home" component={HomeScreen} options={{ headerShown: false }} />
         <Stack.Screen name="Main" component={MyTabs} options={{ headerShown: false }} />
       </Stack.Navigator>

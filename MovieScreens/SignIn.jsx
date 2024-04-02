@@ -118,7 +118,7 @@ export default function SignIn({ navigation }) {
                 {emailError ? <Text style={{ color: 'red', }}>{emailError}</Text> : null}
             </View>
             <View>
-                <Text style={{ color: 'white', fontSize: 18, fontWeight: 'bold', paddingTop: 20 }}>Password</Text>
+                <Text style={{ color: 'white', fontSize: 13,  paddingTop: 20, fontFamily:'Poppins_100Thin_Italic' }}>Password</Text>
                 <TextInput
                     label={'Your Pasword'}
                     textColor='white'
@@ -149,7 +149,7 @@ export default function SignIn({ navigation }) {
             <View style={{ display: 'flex', paddingTop: 10, flexDirection: 'row', gap: 3, alignSelf: 'center', marginTop: 10 }}>
                 <Text style={{ textAlign: 'center', color: 'white', fontSize: 15 }}>Don't have an account?</Text>
                 <TouchableOpacity onPress={() => navigation.navigate('Sign-Up')}>
-                    <Text style={{ color: '#FDD32C', fontSize: 15, fontWeight: 'bold' }}>Sign Up</Text>
+                    <Text style={{ color: '#FDD32C', fontSize: 15, fontWeight: 'bold', }}>Sign Up</Text>
                 </TouchableOpacity>
             </View>
         </View>
